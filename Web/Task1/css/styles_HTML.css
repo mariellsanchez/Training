@@ -1,0 +1,33 @@
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+
+  .subcolumn {
+    float: left;
+    width: 40%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .button {
+    background-color: #000;
+    font-size: 16px;
+    padding: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    color:white;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    text-align:justify;
+  }
