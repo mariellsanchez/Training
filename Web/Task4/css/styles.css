@@ -3,16 +3,6 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: #fff;
-  font-family: 'Arial', sans-serif;
-  font-size: 15px;
-  text-align: justify;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px;
-}
-
 .header__navbar {
   border: 15px solid black;
   width: 100%;
@@ -84,6 +74,16 @@ body {
   height: 24px;
 }
 
+body {
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+}
+
 .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -120,7 +120,7 @@ body {
 }
 
 .container__grid__card {
-  background-color: white;
+  background-color: #fff;
   border: 2px solid #fff;
   border-radius: 0.25em;
   counter-increment: item;
@@ -154,7 +154,7 @@ body {
   padding-left: 25%;
   padding-right: 25%;
   border-radius: 20px;
-  color: white;
+  color: #fff;
 }
 
 footer {
@@ -164,12 +164,12 @@ footer {
   color: #fff;
 }
 
-footer a::link {
-  color: white;
+footer a:link {
+  color: #fff;
 }
 
-footer a::visited {
-  color: white;
+footer a:visited {
+  color: #fff;
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,14 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: $mainColor;
+    color: $contrastColor;
+    a{
+        &:link {
+        color: $contrastColor;
+        }
+        &:visited {
+        color: $contrastColor;
+        }
+    }
+}
