@@ -18,7 +18,6 @@ body {
   height: 12%;
   position: fixed;
   background-color: 000;
-  
   &__img--agents{
     width: 40%;
   }
@@ -100,9 +99,7 @@ body {
   border: 2px solid #fff;
   border-radius: 0.25em;
   counter-increment: item;
-  // margin: 0px;
   padding: 0.5em;
-  //max-width: 350px;
   &__img--certified{
     float: right;
     width: 1.5em;
@@ -134,23 +131,23 @@ body {
 }
 
 @media (min-width: 768px) {  
-.container__grid{
-  display: flex;
-  flex-wrap: wrap;
-}
-.grid__cards {
-  justify-content:center;
-  align-content: center;
-}
+  .container__grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid__cards {
+    justify-content:center;
+    align-content: center;
+  }
 }
 
 @media (min-width: 1280px) {  
-.container__grid{
-  display: flex;
-  flex-wrap: wrap;
-}
-.grid__cards {
-  max-width: 1280px;
-  justify-content:space-between;
-}
+  .container__grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid__cards {
+    max-width: 1280px;
+    justify-content:space-between;
+  }
 }
