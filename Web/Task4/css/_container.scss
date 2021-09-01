@@ -1,7 +1,7 @@
 body {
     background-color: $contrastColor;
     font-family: 'Arial', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     text-align:justify;
     padding-left: 0px;
     padding-right: 0px;
@@ -13,7 +13,7 @@ body {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10em;
+    padding-top: 10.8em;
     &__grid {
       gap: 20px;
       max-width: 90%;
@@ -32,8 +32,8 @@ body {
         padding: 0.5em;
         &--img--certified{
           float: right;
-          width: 1.5em;
-          height: 1.5em;
+          width: 1.9em;
+          height: 1.9em;
         }
         &--column {
           float: left;
