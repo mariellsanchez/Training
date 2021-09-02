@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-
+//style="list-style-type:none;"
   .header__navbar {
     border: 15px solid black;
     width: 100%;
@@ -12,10 +12,17 @@
       margin-left: 4%;
       width: 16rem;
     }
-    .icon-menu{
+    &__menu--hamburger{
       color: fff;
       font-size: 5em;
       float: right;
+    }
+    &__menu--item{
+      display: none;
+      li {
+        list-style: none;
+        margin-left: 5rem;
+    }
     }
   }
   

@@ -3,8 +3,6 @@
 @import './_container.scss';
 @import './_footer.scss';
 
-
-
 @media (min-width: 768px) {  
   .header__navbar {
     height: 10%;
@@ -12,7 +10,7 @@
       width: 12.5rem;
       margin-left: 0px;
     }
-    .icon-menu{
+    &__hamburger--menu{
       font-size: 4em;
     }
   }
@@ -66,12 +64,70 @@
 }
 
 @media (min-width: 1280px) {  
-  .container__grid{
+  /*.container__grid{
     display: flex;
     flex-wrap: wrap;
   }
   .container__grid__card {
     max-width: 1280px;
     justify-content:space-between;
+  }*/
+  .header__navbar {
+    height: 10%;
+    &__img--agents{
+      width: 12.5rem;
+      margin-left: 0px;
+    }
+    &__menu{
+      padding-top: 0px;
+      margin-top: 0px;
+      max-width: 500px;
+    }
+    &__menu--hamburger{
+      display: none;
+    }
+    &__menu--item{
+      display: inline;
+      float: right;
+      margin: 10px;
+      margin-top: 0;
+    }
   }
+  .banner--container{
+    padding-top: 70px;
+    &__img{
+      height: 27rem;
+      &--content{
+        padding: 13rem 3rem;
+        h1{
+          font-size: 2.2rem;
+          padding-left: 1rem;
+          padding-right: 18rem;
+          color: $contrastColor;
+        }
+      }
+      &__searchBar {
+        &--input{
+          font-size: 1.1em;
+        }
+        margin-top: 2.5em;
+        &--sumbit--button{
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .container{
+    &__grid{
+      justify-content:space-between;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__card {
+        max-width: 32%;
+      }
+    }
+  }
+  
 }

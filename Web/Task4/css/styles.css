@@ -16,10 +16,19 @@
   width: 16rem;
 }
 
-.header__navbar .icon-menu {
+.header__navbar__menu--hamburger {
   color: fff;
   font-size: 5em;
   float: right;
+}
+
+.header__navbar__menu--item {
+  display: none;
+}
+
+.header__navbar__menu--item li {
+  list-style: none;
+  margin-left: 5rem;
 }
 
 .banner--container {
@@ -192,7 +201,7 @@ body {
     width: 12.5rem;
     margin-left: 0px;
   }
-  .header__navbar .icon-menu {
+  .header__navbar__hamburger--menu {
     font-size: 4em;
   }
   .banner--container {
@@ -250,18 +259,76 @@ body {
 }
 
 @media (min-width: 1280px) {
+  /*.container__grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container__grid__card {
+    max-width: 1280px;
+    justify-content:space-between;
+  }*/
+  .header__navbar {
+    height: 10%;
+  }
+  .header__navbar__img--agents {
+    width: 12.5rem;
+    margin-left: 0px;
+  }
+  .header__navbar__menu {
+    padding-top: 0px;
+    margin-top: 0px;
+    max-width: 500px;
+  }
+  .header__navbar__menu--hamburger {
+    display: none;
+  }
+  .header__navbar__menu--item {
+    display: inline;
+    float: right;
+    margin: 10px;
+    margin-top: 0;
+  }
+  .banner--container {
+    padding-top: 70px;
+  }
+  .banner--container__img {
+    height: 27rem;
+  }
+  .banner--container__img--content {
+    padding: 13rem 3rem;
+  }
+  .banner--container__img--content h1 {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+    padding-right: 18rem;
+    color: #fff;
+  }
+  .banner--container__img__searchBar {
+    margin-top: 2.5em;
+  }
+  .banner--container__img__searchBar--input {
+    font-size: 1.1em;
+  }
+  .banner--container__img__searchBar--sumbit--button {
+    width: 35px;
+    height: 35px;
+  }
   .container__grid {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .container__grid__card {
-    max-width: 1280px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    max-width: 32%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
