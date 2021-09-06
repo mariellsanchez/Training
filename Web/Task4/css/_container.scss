@@ -1,3 +1,4 @@
+
 body {
   background-color: $contrastColor;
   font-family: 'Arial', sans-serif;
@@ -30,10 +31,10 @@ body {
       border-radius: 0.25em;
       counter-increment: item;
       padding: 0.5em;
-      &--img--certified{
+      &--svg--certified{
         float: right;
-        width: 1.9em;
-        height: 1.9em;
+        width: 2.5 em;
+        height: 2.5 em;
       }
       &--column {
         align-content: center;  

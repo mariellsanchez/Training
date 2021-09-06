@@ -5,7 +5,8 @@
 
 @media (min-width: 768px) {  
   .header__navbar {
-    height: 10%;
+    align-items: flex-start;
+    height: 12%;
     &__img--agents{
       width: 12.5rem;
       margin-left: 0px;
@@ -14,6 +15,7 @@
       font-size: 4em;
     }
   }
+  
   .banner--container{
     padding-top: 70px;
     &__img{
@@ -33,12 +35,12 @@
         }
         margin-top: 2.5em;
         &--sumbit--button{
-          width: 35px;
-          height: 35px;
+          padding-top: 0px;
         }
       }
     }
   }
+
   .container{
     padding-top: 0;
     &__grid{
@@ -51,83 +53,115 @@
       }
     }
   }
+
   body {
     font-size: 13px;
   }
+
   .footer--content {
+    padding: 1% 4%;
     text-align: left;
     &--link{
       text-align: right;
     }
   }
-  
 }
 
 @media (min-width: 1280px) {  
-  /*.container__grid{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container__grid__card {
-    max-width: 1280px;
-    justify-content:space-between;
-  }*/
   .header__navbar {
-    height: 10%;
     &__img--agents{
-      width: 12.5rem;
+      width: 14.6rem;
       margin-left: 0px;
     }
     &__menu{
-      padding-top: 0px;
-      margin-top: 0px;
-      max-width: 500px;
+      float: right;
+      margin-right: 24px;
     }
     &__menu--hamburger{
       display: none;
     }
     &__menu--item{
-      display: inline;
-      float: right;
-      margin: 10px;
-      margin-top: 0;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 20px;
+      padding-right: 20px;
+      margin-top: 10px;
+      &--link{
+        &:link {
+          color: $contrastColor;
+          text-decoration: none;
+          }
+          &:visited {
+          color: $contrastColor;
+          }
+        }
     }
   }
+
   .banner--container{
     padding-top: 70px;
     &__img{
-      height: 27rem;
+      background-image: url("../images/banner.png");
+      height: 38rem;
       &--content{
-        padding: 13rem 3rem;
+        padding: 16.5rem 3rem;
+        padding-left: 6.3rem;
         h1{
-          font-size: 2.2rem;
-          padding-left: 1rem;
-          padding-right: 18rem;
+          font-size: 2.6rem;
           color: $contrastColor;
         }
       }
       &__searchBar {
+        border: none;
+        max-width: 47%;
+        float: left;
+        margin-top: 1%;
         &--input{
-          font-size: 1.1em;
+          font-size: 1.8em;
         }
-        margin-top: 2.5em;
-        &--sumbit--button{
-          width: 35px;
-          height: 35px;
+        &--sumbit--button{ 
+          padding-top: 0px;
         }
       }
     }
   }
-  .container{
+
+  .container{    
+  padding-top: 4rem;
     &__grid{
       justify-content:space-between;
-      display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
       &__card {
-        max-width: 32%;
+        max-width: 30%;
+        font-size: 0.85rem;
+        padding: 0px;
+        h1{
+          font-size: 2.5rem;
+        }
+        h3{
+          font-size: 1 rem;
+          justify-content: center; 
+        }
+        &--column {
+          margin: auto; 
+          padding-top: 0px;
+          &--one{
+            width: 42%;
+          }
+          &--two{
+            margin-top: 0px;
+            width: 57%;
+          }
+          &--image {
+            max-width: 92%;
+            margin-top: 0em;
+          }
+        }
+        &--button {
+          width: 92%;
+          height: auto;
+        }
       }
     }
   }
-  
 }
