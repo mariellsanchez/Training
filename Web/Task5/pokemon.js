@@ -50,19 +50,6 @@ function damage_calculator(pokemon1, pokemon2){
     return Math.ceil(50 * (pokemon1.attack/pokemon2.defense) * effectiveness_calculator[pokemon1.type][pokemon2.type]);
 }
 
-/*var pok = new Pokemon("pinky", type.FIRE, 50, 63)
-
-function damage(attack, defense, effectiveness){
-    return  50 * (attack / defense) * effectiveness;
-}
-
-console.log("hate pokemon");
-
-function damage_calculator(yourType, opponentType, attack, defense){
-    return Math.ceil(50 * (attack/defense) * effects[yourType][opponentType]);
-}
-*/
-
 var pinky = new Pokemon("Pinky", type.FIRE, 100, 10);
 var blueish = new Pokemon("Blueish", type.WATER, 100, 50);
 var purple = new Pokemon("Purple", type.ELECTRIC, 80, 60);
