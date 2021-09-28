@@ -38,8 +38,8 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 90%;
-    margin: 0 auto !important; 
-	  float: none !important; 
+    margin: 0 auto; 
+	  float: none; 
 
   }
 
