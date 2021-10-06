@@ -1,18 +1,20 @@
 
-.footer--content {
+.footer {
     text-align: center;
     width: 100%;
     padding: 5%;
     background-color: $mainColor;
     color: $contrastColor;
-    &--link{
-        a{
-            &:link {
+    &__link{
+        //float: right;
+        &:link {
             color: $contrastColor;
-            }
-            &:visited {
+        }
+        &:visited {
             color: $contrastColor;
-            }
+        }
+        &--position{
+            float: right;
         }
     }
 }

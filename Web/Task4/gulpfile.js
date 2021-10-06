@@ -21,8 +21,6 @@ gulp.task('css', function(done) {
     done();
 });
 
-//gulp.task('run', ['sass', 'css']);
-
 gulp.task('run', gulp.series('sass', 'css'), cb => {
   cb();
 });

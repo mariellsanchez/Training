@@ -1,64 +1,68 @@
 @import './_variables.scss';
-@import './_header.scss';
+@import './_navbar.scss';
 @import './_container.scss';
 @import './_footer.scss';
 
+
 @media (min-width: 768px) {  
-  .header__navbar {
+  .navbar {
     align-items: flex-start;
     height: 12%;
-    &__img--agents{
+    &__img{
       width: 12.5rem;
-      margin-left: 0px;
-    }
-    &__hamburger--menu{
-      font-size: 4em;
+      margin-left: auto;
     }
   }
+
+  .menu__hamburger{
+    font-size: 4em;
+  }
   
-  .banner--container{
+  .banner{
     padding-top: 70px;
     &__img{
       height: 27rem;
-      &--content{
-        padding: 13rem 3rem;
-        h1{
-          font-size: 2.2rem;
-          padding-left: 1rem;
-          padding-right: 18rem;
-          color: $contrastColor;
-        }
+      
+    }
+    &__content{
+      padding: 13rem 3rem;
+      h1{
+        font-size: 2.2rem;
+        color: $contrastColor;
       }
-      &__searchBar {
-        &--input{
-          font-size: 1.1em;
-        }
-        margin-top: 2.5em;
-        &--sumbit--button{
-          padding-top: 0px;
-        }
-      }
+    }
+  }
+
+  .searchBar {
+    &--input{
+      font-size: 1.1em;
+    }
+    margin-top: 2.5em;
+    &__button{
+      padding-top: 0px;
     }
   }
 
   .container{
     padding-top: 0;
-    &__grid{
-      display: flex;
-      flex-wrap: wrap;
-      &__card {
-        justify-content:center;
-        align-content: center;
-        max-width: 48%;
-      }
-    }
+  }
+
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    justify-content:center;
+    align-content: center;
+    max-width: 48%;
   }
 
   body {
     font-size: 13px;
   }
 
-  .footer--content {
+  .footer {
     padding: 1% 4%;
     text-align: left;
     &--link{
@@ -68,25 +72,23 @@
 }
 
 @media (min-width: 1280px) {  
-  .header__navbar {
-    &__img--agents{
+
+  .navbar {
+    &__img{
       width: 14.6rem;
-      margin-left: 0px;
     }
-    &__menu{
-      float: right;
-      margin-right: 24px;
-    }
-    &__menu--hamburger{
+  }
+
+  .menu{
+    float: right;
+    margin: 1.5rem 1rem;
+    &__hamburger{
       display: none;
     }
-    &__menu--item{
+    &__item{
       font-size: 1.2rem;
       display: inline-block;
-      margin: 20px;
-      padding-right: 20px;
-      margin-top: 10px;
-      &--link{
+      &--visited{
         &:link {
           color: $contrastColor;
           text-decoration: none;
@@ -97,71 +99,76 @@
         }
     }
   }
-
-  .banner--container{
+    
+  .banner{
     padding-top: 70px;
     &__img{
       background-image: url("../images/banner.png");
       height: 38rem;
-      &--content{
-        padding: 16.5rem 3rem;
-        padding-left: 6.3rem;
-        h1{
-          font-size: 2.6rem;
-          color: $contrastColor;
-        }
-      }
-      &__searchBar {
-        border: none;
-        max-width: 47%;
-        float: left;
-        margin-top: 1%;
-        &--input{
-          font-size: 1.8em;
-        }
-        &--sumbit--button{ 
-          padding-top: 0px;
-        }
+      
+    }
+    &__content{
+      padding: 16.5rem 3rem;
+      padding-left: 6.3rem;
+      h1{
+        font-size: 2.6rem;
+        color: $contrastColor;
       }
     }
   }
 
+  .searchBar {
+    border: none;
+    max-width: 47%;
+    float: left;
+    margin-top: 1%;
+    &--input{
+      font-size: 1.8em;
+    }
+    &__button{ 
+      padding-top: 0px;
+    }
+  }
+
   .container{    
-  padding-top: 4rem;
-    &__grid{
-      justify-content:space-between;
-      flex-wrap: wrap;
-      &__card {
-        max-width: 30%;
-        font-size: 0.85rem;
-        padding: 0px;
-        h1{
-          font-size: 2.5rem;
-        }
-        h3{
-          font-size: 1 rem;
-          justify-content: center; 
-        }
-        &--column {
-          margin: auto; 
-          padding-top: 0px;
-          &--one{
-            width: 42%;
-          }
-          &--two{
-            margin-top: 0px;
-            width: 57%;
-          }
-          &--image {
-            max-width: 92%;
-            margin-top: 0em;
-          }
-        }
-        &--button {
-          width: 92%;
-          height: auto;
-        }
+    padding-top: 4rem;
+  }
+
+  .grid{
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 30%;
+    font-size: 0.85rem;
+    padding: 0px;
+    h1{
+      font-size: 2.5rem;
+    }
+    h3{
+      font-size: 1 rem;
+      justify-content: center; 
+    }
+    &__column {
+      margin: auto; 
+      padding-top: 0px;
+      &--one{
+        width: 42%;
       }
+      &--two{
+        margin-top: 0px;
+        width: 57%;
+      }
+      
+    }
+    &__image {
+      max-width: 92%;
+      margin-top: 0em;
+    }
+    &__button {
+      width: 92%;
+      height: auto;
     }
   }
 }
