@@ -1,0 +1,113 @@
+<head>
+  <link rel="stylesheet" href="scss/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link href="https://file.myfontastic.com/Q2bd75GJSu4DBh2Aim52cE/icons.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="images/certified.svg"/>
+
+  <title>Security | Home</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js"></script>
+</head>
+  
+<body>
+  <nav class="navbar">
+    <img class="navbar__img" src="images/logo.png"> 
+    <ul class="menu">
+      <li class="menu__item">
+          <a href="#" class="menu__item--visited">Directorio de Agentes</a>
+      </li>
+      <li class="menu__item">
+          <a href="#" class="menu__item--visited">Contacto</a>
+      </li>
+      <li class="menu__item">
+          <a href="#" class="menu__item--visited">Ingresar</a>
+      </li>
+      <div class="menu__hamburger">
+        <a class="icon-menu"></a>
+      </div> 
+    </ul>
+  </nav>
+
+  <div class="banner" >
+    <div class="banner__img">
+      <div class="banner__content">
+        <h1>Los Mejores agentes de seguridad</h1>
+        <div class="searchBar">
+          <input class="searchBar--input"  type="text" placeholder="Buscar por ubicación" value="" />
+          <button class="searchBar__button" type="submit">
+            <div class="searchBar__button--sumbit" >
+              <a class="icon-search"></a>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="grid" id="grid">
+      <script type="mustache_template" id="card_template">
+        {{#agents }}
+          <div class="card">
+            <h2> {{ title }}
+              <img class="card--certified" src="images/certified.svg">
+            </h2>
+            <hr class="solid">
+            <div class="card__column--one">
+              <img class="card__image" src={{image}}>
+              <h3> {{ price }} </h3>
+            </div> 
+            <div class="card__column--two">
+              <p> {{ description }} </p>
+              <button class="card__button">Contratar</button>
+            </div>
+          </div>
+        {{/agents }}
+      </script>
+      <script>
+        var data = { 
+          agents: [
+            {
+              title : 'Chuck Norris Bodyguards',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
+              price: 'Desde $15 / 12 horas',
+              image: 'images/logo/chuck-norris.png'
+            },
+            {
+              title : 'Donuts Security',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
+              price: 'Desde $15 / 12 horas',
+              image: 'images/logo/donuts-security.png'
+            },
+            {
+              title : 'Raptor Squad',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
+              price: 'Desde $15 / 12 horas',
+              image: 'images/logo/raptor-squad.jpg'
+            },
+            {
+              title : 'Power Rangers',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
+              price: 'Desde $15 / 12 horas',
+              image: 'images/logo/power-rangers.png'
+            }
+          ]
+        };
+        var tmpl = document.getElementById("card_template").innerHTML;
+        var html = Mustache.to_html(tmpl, data);
+        var card = document.getElementById("grid");
+        card.innerHTML = html;
+      </script>
+    </ul>
+  </div>
+</body>
+
+<footer class="footer">
+  <div class="footer__text">
+    <p class="footer__link--position">
+      <a class="footer__link" href="https://www.youtube.com/watch?v=8f7wj_RcqYk&ab_channel=GoodClipsDaily">Términos y Condiciones</a>
+    </p>
+    <p>Desarrollado por Akurey.com</p>
+    <p>Todos los derechos reservados</p>
+  </div>
+</footer>
+    
