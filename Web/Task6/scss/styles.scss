@@ -7,7 +7,7 @@
 @media (min-width: 768px) {  
   .navbar {
     align-items: flex-start;
-    height: 12%;
+    height: auto;
     &__img{
       width: 12.5rem;
       margin-left: auto;
@@ -45,16 +45,18 @@
 
   .container{
     padding-top: 0;
+    display: flex;
   }
 
   .grid{
-    display: flex;
     flex-wrap: wrap;
+    //align-self: stretch;// |  | ;
   }
 
   .card {
-    justify-content:center;
-    align-content: center;
+    //justify-content:center;
+    //align-content: ;
+    
     max-width: 48%;
   }
 

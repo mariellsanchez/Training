@@ -1,0 +1,18 @@
+{
+  "name": "task6",
+  "version": "1.0.0",
+  "description": "--------------------\r       G  U  L  P\r --------------------",
+  "main": "template.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "install": "^0.13.0",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
