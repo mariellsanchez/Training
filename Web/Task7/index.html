@@ -48,13 +48,15 @@
       <script type="mustache_template" id="card_template">
         {{#agents }}
           <div class="card">
-            <h2> {{ title }}
-              <img class="card--certified" src="images/certified.svg">
+            <h2> {{ name }}
+              {{#isCertified}}
+                <img class="card--certified" src="images/certified.svg">
+              {{/isCertified}}
             </h2>
             <hr class="solid">
             <div class="card__column--one">
               <img class="card__image" src={{image}}>
-              <h3> {{ price }} </h3>
+              <h3> Desde ${{ hours }} la hora </h3>
             </div> 
             <div class="card__column--two">
               <p> {{ description }} </p>
