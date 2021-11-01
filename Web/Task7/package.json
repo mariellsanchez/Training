@@ -6,8 +6,12 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "http-server": "^14.0.0",
     "install": "^0.13.0",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {},
   "scripts": {

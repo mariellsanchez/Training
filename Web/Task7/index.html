@@ -6,6 +6,7 @@
 
   <title>Security | Home</title>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js"></script>
+  
 </head>
   
 <body>
@@ -32,8 +33,8 @@
       <div class="banner__content">
         <h1>Los Mejores agentes de seguridad</h1>
         <div class="searchBar">
-          <input class="searchBar--input"  type="text" placeholder="Buscar por ubicación" value="" />
-          <button class="searchBar__button" type="submit">
+          <input class="searchBar--input" id="searchBar--input" type="text" placeholder="Buscar por ubicación" value="" />
+          <button class="searchBar__button" type="submit" onclick="makeRequest()">
             <div class="searchBar__button--sumbit" >
               <a class="icon-search"></a>
             </div>
@@ -46,7 +47,7 @@
   <div class="container">
     <ul class="grid" id="grid">
       <script type="mustache_template" id="card_template">
-        {{#agents }}
+        {{#companies }}
           <div class="card">
             <h2> {{ name }}
               {{#isCertified}}
@@ -63,44 +64,117 @@
               <button class="card__button">Contratar</button>
             </div>
           </div>
-        {{/agents }}
+        {{/companies }}
       </script>
-      <script>
-        var data = { 
-          agents: [
+      <!-- <script>
+        
+        var dataJSON;
+        function filterItemsByName(arr, query) {
+          return arr.filter(function(obj) {
+            let obj_name = obj.name;
+            return obj_name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+          })
+        }
+
+        
+
+        var companies = []; ///Aqui ya te encargas de formar el array
+        var data_json = {};
+        const card_tmpl = document.getElementById('card_template').innerHTML;;
+        var html;
+        var card;
+        function make_request() {
+          const fetchPromise = fetch("https://my-json-server.typicode.com/mariellsanchez/Training/db");
+          const main = document.getElementById("grid");
+          fetchPromise.then(response => {
+            return response.json();
+          }).then(data => {
+            var text_input = document.getElementById("searchBar--input").value;
+            
+            console.log(data.companies);
+            console.log(filterItemsByName(data.companies, text_input));
+            companies = []; ///Aqui ya te encargas de formar el array
+            companies = filterItemsByName(data.companies, text_input);
+            console.log(companies);
+            data_json = {};
+            data_json['companies'] = companies;
+            console.log(data_json);
+            console.log("is this DONE");
+            html = Mustache.to_html(card_tmpl, data_json);
+            card = document.getElementById("grid");
+            // card.addEventListener("keyup", function(event) {
+            //     if (event.keyCode === 13) {
+            //         event.preventDefault();
+            //         document.getElementById("searchBar--input").click(); 
+            //     }
+            // });
+            //console.log(document.getElementById("searchBar--input").value)
+
+            card.innerHTML = html;
+          });
+          function listOfNames(data) {
+            dataJSON = data;
+            console.log(data);
+            console.log("me cago we");
+            console.log(data.companies.length);
+            console.log(data.companies[1].name);
+            console.log(dataJSON);
+            for (var i = 0; i < data.companies.length ; i++) {
+              //console.log(data.companies[i]);
+              console.log("WUKI WUKI WUKI");
+              /*if (i in this) {
+                var val = this[i];
+                if (fun.call(thisp, val, i, this))
+                  res.push(val);
+              }*/
+            }
+           // const names = data.map(company => `<li>${company.name}</li>`).join("\n");
+           // return `<ul>${names}</ul>`
+          }
+        }
+
+
+        dataJSONjj = { 
+          "companies": [
             {
-              title : 'Chuck Norris Bodyguards',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
-              price: 'Desde $15 / 12 horas',
-              image: 'images/logo/chuck-norris.png'
+              "name": "Chuck Norris' Bodyguards",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
+              "rate": "500",
+              "hours": "8",
+              "isCertified": true,
+              "image": "http://akurey.com/trainings/companies/chuck-norris-logo.png"
             },
             {
-              title : 'Donuts Security',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
-              price: 'Desde $15 / 12 horas',
-              image: 'images/logo/donuts-security.png'
+              "name": "Power Rangers Squad",
+              "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+              "rate": "100",
+              "hours": "12",
+              "isCertified": false,
+              "image": "http://akurey.com/trainings/companies/power-rangers-logo.png"
             },
             {
-              title : 'Raptor Squad',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
-              price: 'Desde $15 / 12 horas',
-              image: 'images/logo/raptor-squad.jpg'
-            },
-            {
-              title : 'Power Rangers',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel enim ac lacinia. Phasellus ac nisl id velit tristique accumsan nec at enim. Etiam posuere tellus ut ligula feugiat auctor. Morbi ut quam aliquet, viverra purus in, convallis ante.',
-              price: 'Desde $15 / 12 horas',
-              image: 'images/logo/power-rangers.png'
+              "name": "Kame Security Ltda.",
+              "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+              "rate": "150",
+              "hours": "10",
+              "isCertified": false,
+              "image": "http://akurey.com/trainings/companies/kame-logo.png"
             }
           ]
         };
-        var tmpl = document.getElementById("card_template").innerHTML;
-        var html = Mustache.to_html(tmpl, data);
-        var card = document.getElementById("grid");
-        card.innerHTML = html;
-      </script>
+        //var tmpl = document.getElementById("card_template").innerHTML;
+        //var html = Mustache.to_html(tmpl, dataJSON);
+        //var card = document.getElementById("grid");
+        //card.innerHTML = html;
+      </script> -->
+
+      
+
     </ul>
   </div>
+
+  <script src="index.js"></script>
+
 </body>
 
 <footer class="footer">
