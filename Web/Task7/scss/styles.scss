@@ -1,0 +1,177 @@
+@import './_variables.scss';
+@import './_navbar.scss';
+@import './_container.scss';
+@import './_footer.scss';
+
+
+@media (min-width: 768px) {  
+  .navbar {
+    align-items: flex-start;
+    height: auto;
+    &__img{
+      width: 12.5rem;
+      margin-left: auto;
+    }
+  }
+
+  .menu__hamburger{
+    font-size: 4em;
+  }
+  
+  .banner{
+    padding-top: 70px;
+    &__img{
+      height: 27rem;
+      
+    }
+    &__content{
+      padding: 13rem 3rem;
+      h1{
+        font-size: 2.2rem;
+        color: $contrastColor;
+      }
+    }
+  }
+
+  .searchBar {
+    &--input{
+      font-size: 1.1em;
+    }
+    margin-top: 2.5em;
+    &__button{
+      padding-top: 0px;
+    }
+  }
+
+  .container{
+    padding-top: 0;
+    display: flex;
+  }
+
+  .grid{
+    justify-content:space-between;
+    flex-wrap: wrap;
+    //align-self: stretch;// |  | ;
+  }
+
+  .card {
+    //justify-content:center;
+    //align-content: ;
+    
+    max-width: 48%;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  .footer {
+    padding: 1% 4%;
+    text-align: left;
+    &--link{
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 1280px) {  
+
+  .navbar {
+    &__img{
+      width: 14.6rem;
+    }
+  }
+
+  .menu{
+    float: right;
+    margin: 1.5rem 1rem;
+    &__hamburger{
+      display: none;
+    }
+    &__item{
+      font-size: 1.2rem;
+      display: inline-block;
+      &--visited{
+        &:link {
+          color: $contrastColor;
+          text-decoration: none;
+          }
+          &:visited {
+          color: $contrastColor;
+          }
+        }
+    }
+  }
+    
+  .banner{
+    padding-top: 70px;
+    &__img{
+      background-image: url("../images/banner.png");
+      height: 38rem;
+      
+    }
+    &__content{
+      padding: 16.5rem 3rem;
+      padding-left: 6.3rem;
+      h1{
+        font-size: 2.6rem;
+        color: $contrastColor;
+      }
+    }
+  }
+
+  .searchBar {
+    border: none;
+    max-width: 47%;
+    float: left;
+    margin-top: 1%;
+    &--input{
+      font-size: 1.8em;
+    }
+    &__button{ 
+      padding-top: 0px;
+    }
+  }
+
+  .container{    
+    padding-top: 4rem;
+  }
+
+  .grid{
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 30%;
+    font-size: 0.85rem;
+    padding: 0px;
+    h1{
+      font-size: 2.5rem;
+    }
+    h3{
+      font-size: 1 rem;
+      justify-content: center; 
+    }
+    &__column {
+      margin: auto; 
+      padding-top: 0px;
+      &--one{
+        width: 42%;
+      }
+      &--two{
+        margin-top: 0px;
+        width: 57%;
+      }
+      
+    }
+    &__image {
+      max-width: 92%;
+      margin-top: 0em;
+    }
+    &__button {
+      width: 92%;
+      height: auto;
+    }
+  }
+}
