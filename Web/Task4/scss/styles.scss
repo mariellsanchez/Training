@@ -3,7 +3,6 @@
 @import './_container.scss';
 @import './_footer.scss';
 
-
 @media (min-width: 768px) {  
   .navbar {
     align-items: flex-start;
@@ -65,7 +64,7 @@
   .footer {
     padding: 1% 4%;
     text-align: left;
-    &--link{
+    &__link{
       text-align: right;
     }
   }
@@ -150,13 +149,13 @@
       font-size: 1 rem;
       justify-content: center; 
     }
-    &__column {
+    &__container {
       margin: auto; 
       padding-top: 0px;
-      &--one{
+      &__image{
         width: 42%;
       }
-      &--two{
+      &__description{
         margin-top: 0px;
         width: 57%;
       }

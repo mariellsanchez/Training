@@ -29,26 +29,27 @@ body {
   padding-right: 0px;
 }
 
+.image__tittle{
+  float: right;
+  width: 2.5 em;
+  height: 2.5 em;
+}
+
 .card {
   background-color: $contrastColor;
   border: 2px solid $contrastColor;
   border-radius: 0.25em;
   counter-increment: item;
   padding: 0.5em;
-  &--certified{
-    float: right;
-    width: 2.5 em;
-    height: 2.5 em;
-  }
-  &__column {
+  &__container {
     align-content: center;  
     margin: auto; 
     padding: 10px;
-    &--one{
+    &__image{
       width: 35%;
       float: left;
     }
-    &--two{
+    &__description{
       width: 55%;
       float: right;
     }
